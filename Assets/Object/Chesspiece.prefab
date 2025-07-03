@@ -103,18 +103,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   movePlate: {fileID: 1447420591481689466, guid: bd77afb6947b8a24eb7136348057f102, type: 3}
-  black_queen: {fileID: -2628853326628446179, guid: e3d0790880aa1bb4d83edef2809b2b08, type: 3}
-  black_knight: {fileID: -334450713805299198, guid: c714b5c8d3f49d34589c6f9ebd6532b2, type: 3}
-  black_bishop: {fileID: -6414592721767173361, guid: abb322013dc0a654bb840ef20be7e4ee, type: 3}
-  black_king: {fileID: -641104846605737351, guid: 533ab10209ac37d4cac2a6ea952cfc73, type: 3}
-  black_rook: {fileID: -7587791273309554880, guid: b8265c2e4c8140445b8fd8933fff8711, type: 3}
-  black_pawn: {fileID: -4341603147912474925, guid: cf7c6356c1da29e499f7d2e6f436cd7e, type: 3}
-  white_queen: {fileID: 7270707491364550308, guid: 45ee119abb82fdf41830c2f428bbc67f, type: 3}
-  white_knight: {fileID: 8769669200613306614, guid: 2125e8e9676a9ca469f71d3a93ebcdcb, type: 3}
-  white_bishop: {fileID: 7560534232159598683, guid: f50152b655b20884ba8de75505b26645, type: 3}
-  white_king: {fileID: -3792998861040722889, guid: 742184ee97a7386498591a22a6a8ee69, type: 3}
-  white_rook: {fileID: -8948728166497563328, guid: 7a6040c58b90b0346be068d2897ccf34, type: 3}
-  white_pawn: {fileID: 5580225292014371162, guid: 5b5d9fe25396e3f448f0a2be747a5b91, type: 3}
+  Spade_queen: {fileID: -1301619307140852808, guid: 962d05b02e0036842a4bc83b8497ec90, type: 3}
+  Spade_knight: {fileID: -5230042241032557149, guid: 5592dbe212eb4ce4b912107af91ac8aa, type: 3}
+  Spade_bishop: {fileID: 3121492775142060302, guid: 3840793365ca6a54a8fec901bd76487b, type: 3}
+  Spade_king: {fileID: -6839354158915452564, guid: 06d67cb3c061757498660dac656ace49, type: 3}
+  Spade_rook: {fileID: -5930397407359888694, guid: face7530cb6b6e843a89f6f1e5462e62, type: 3}
+  Spade_pawn: {fileID: -5347918408096460170, guid: 48aff919fdb59874a927cd3a0dcc71d9, type: 3}
+  Heart_queen: {fileID: -4922301148782653676, guid: c8ee20e1f230e024d9c477c27a0a5bf5, type: 3}
+  Heart_knight: {fileID: -2438385965650430947, guid: 25170eab4c6b28b41a8b34cfe77799e5, type: 3}
+  Heart_bishop: {fileID: -7246407879942196378, guid: 73c4b1d5467085040b48722bae87e0fd, type: 3}
+  Heart_king: {fileID: 6907376809367620864, guid: 4c7daf3c298d0564f9fad3ae92fcd806, type: 3}
+  Heart_rook: {fileID: -7416392150357780156, guid: f8e33a4c1d86be742bd959634fd209a6, type: 3}
+  Heart_pawn: {fileID: -5479159110383553765, guid: 92530f38b076693419f7a12d1c23c523, type: 3}
+  Club_queen: {fileID: -5795450286558939746, guid: b3899786d2cd3c04c99dfaf0b8bd1f6c, type: 3}
+  Club_knight: {fileID: 6152372667051635028, guid: 13a23365decc16a47b84626bc2facf29, type: 3}
+  Club_bishop: {fileID: -5729734589806467354, guid: 8bafb0e4404a44a45bb682ac17b43705, type: 3}
+  Club_king: {fileID: -6510374445648194582, guid: 8de0eced60bd02448bb85d2660c51421, type: 3}
+  Club_rook: {fileID: -3742480429911377674, guid: 29ceb75dd56847943b47cef6ae2acb2f, type: 3}
+  Club_pawn: {fileID: 6088352848683747120, guid: 098da69a09204f247bb9d842435d8722, type: 3}
+  Dia_queen: {fileID: 745726839691171322, guid: 39eec7a1d79427e4ca1c1a7951496f9a, type: 3}
+  Dia_knight: {fileID: 1870564709006693240, guid: 639c31a9a930dca4db0a1dee21189b37, type: 3}
+  Dia_bishop: {fileID: 9050504019945057166, guid: 9c02892114441654097c2610d3c34363, type: 3}
+  Dia_king: {fileID: 2098006081308211036, guid: c188dbf2ffd55684ab8781fc12c4ff78, type: 3}
+  Dia_rook: {fileID: 7737845127801446192, guid: 9c70d9c45399b1741a3ad2c49cdf5e93, type: 3}
+  Dia_pawn: {fileID: 4481229638871417279, guid: ac09b5a87deac634abb221e33a2a9aab, type: 3}
 --- !u!61 &1266867835074921646
 BoxCollider2D:
   m_ObjectHideFlags: 0

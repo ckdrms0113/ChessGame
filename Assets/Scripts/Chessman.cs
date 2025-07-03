@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class Chessman : MonoBehaviour
 {
-    public GameObject controller;
+     public GameObject controller;
     public GameObject movePlate;
 
     private int xBoard = -1;
     private int yBoard = -1;
     private string player;
-    private bool hasMoved = false;
+    private string emblem; // ♠, ♥, ♣, ♦ 중 하나
 
+    private bool hasMoved = false;
     public bool HasMoved() => hasMoved;
     public void SetMoved(bool value) => hasMoved = value;
 
-    // 각 문양별 Sprite 묶음
-    [Header("♠ Spade")]
-    public Sprite spade_queen, spade_knight, spade_bishop, spade_king, spade_rook, spade_pawn;
-    [Header("♥ Heart")]
-    public Sprite heart_queen, heart_knight, heart_bishop, heart_king, heart_rook, heart_pawn;
-    [Header("♦ Diamond")]
-    public Sprite diamond_queen, diamond_knight, diamond_bishop, diamond_king, diamond_rook, diamond_pawn;
-    [Header("♣ Club")]
-    public Sprite club_queen, club_knight, club_bishop, club_king, club_rook, club_pawn;
+    // 각 문양별 스프라이트
+    public Sprite Spade_queen, Spade_knight, Spade_bishop, Spade_king, Spade_rook, Spade_pawn;
+    public Sprite Heart_queen, Heart_knight, Heart_bishop, Heart_king, Heart_rook, Heart_pawn;
+    public Sprite Club_queen, Club_knight, Club_bishop, Club_king, Club_rook, Club_pawn;
+    public Sprite Dia_queen, Dia_knight, Dia_bishop, Dia_king, Dia_rook, Dia_pawn;
 
     private void Start()
     {
@@ -35,95 +32,101 @@ public class Chessman : MonoBehaviour
         controller = GameObject.FindGameObjectWithTag("GameController");
         SetCoords();
 
-        string emblem = (transform.position.y < 0) ?
-            PlayerPrefs.GetString("P1_Emblem", "spade") :
-            PlayerPrefs.GetString("P2_Emblem", "heart");
+        // 플레이어 및 문양 결정
+        if (name.StartsWith("white"))
+        {
+            player = "white";
+            emblem = PlayerPrefs.GetString("P1_Emblem", "Spade");
+        }
+        else
+        {
+            player = "black";
+            emblem = PlayerPrefs.GetString("P2_Emblem", "Heart");
+        }
 
-        string type = name.Split('_')[1];      // 예: pawn, rook
-        player = name.Split('_')[0];           // white / black
+        string pieceType = name.Split('_')[1]; // "pawn", "king" 등
 
-        // 문양 + 타입 조합으로 Sprite 설정
-        Sprite selectedSprite = GetSpriteForType(emblem, type);
+        // 스프라이트 적용
+        Sprite selectedSprite = GetSprite(emblem, pieceType);
         if (selectedSprite != null)
         {
             GetComponent<SpriteRenderer>().sprite = selectedSprite;
         }
     }
 
-    private Sprite GetSpriteForType(string emblem, string type)
+    private Sprite GetSprite(string emblem, string pieceType)
     {
         switch (emblem)
         {
-            case "spade":
-                return GetSpadeSprite(type);
-            case "heart":
-                return GetHeartSprite(type);
-            case "diamond":
-                return GetDiamondSprite(type);
-            case "club":
-                return GetClubSprite(type);
+            case "Spade":
+                return GetSpadeSprite(pieceType);
+            case "Heart":
+                return GetHeartSprite(pieceType);
+            case "Club":
+                return GetClubSprite(pieceType);
+            case "Dia":
+                return GetDiaSprite(pieceType);
             default:
                 return null;
         }
     }
 
-    private Sprite GetSpadeSprite(string type)
+    private Sprite GetSpadeSprite(string piece)
     {
-        return type switch
+        return piece switch
         {
-            "queen" => spade_queen,
-            "king" => spade_king,
-            "rook" => spade_rook,
-            "knight" => spade_knight,
-            "bishop" => spade_bishop,
-            "pawn" => spade_pawn,
+            "queen" => Spade_queen,
+            "king" => Spade_king,
+            "rook" => Spade_rook,
+            "bishop" => Spade_bishop,
+            "knight" => Spade_knight,
+            "pawn" => Spade_pawn,
             _ => null
         };
     }
 
-    private Sprite GetHeartSprite(string type)
+    private Sprite GetHeartSprite(string piece)
     {
-        return type switch
+        return piece switch
         {
-            "queen" => heart_queen,
-            "king" => heart_king,
-            "rook" => heart_rook,
-            "knight" => heart_knight,
-            "bishop" => heart_bishop,
-            "pawn" => heart_pawn,
+            "queen" => Heart_queen,
+            "king" => Heart_king,
+            "rook" => Heart_rook,
+            "bishop" => Heart_bishop,
+            "knight" => Heart_knight,
+            "pawn" => Heart_pawn,
             _ => null
         };
     }
 
-    private Sprite GetDiamondSprite(string type)
+    private Sprite GetClubSprite(string piece)
     {
-        return type switch
+        return piece switch
         {
-            "queen" => diamond_queen,
-            "king" => diamond_king,
-            "rook" => diamond_rook,
-            "knight" => diamond_knight,
-            "bishop" => diamond_bishop,
-            "pawn" => diamond_pawn,
+            "queen" => Club_queen,
+            "king" => Club_king,
+            "rook" => Club_rook,
+            "bishop" => Club_bishop,
+            "knight" => Club_knight,
+            "pawn" => Club_pawn,
             _ => null
         };
     }
 
-    private Sprite GetClubSprite(string type)
+    private Sprite GetDiaSprite(string piece)
     {
-        return type switch
+        return piece switch
         {
-            "queen" => club_queen,
-            "king" => club_king,
-            "rook" => club_rook,
-            "knight" => club_knight,
-            "bishop" => club_bishop,
-            "pawn" => club_pawn,
+            "queen" => Dia_queen,
+            "king" => Dia_king,
+            "rook" => Dia_rook,
+            "bishop" => Dia_bishop,
+            "knight" => Dia_knight,
+            "pawn" => Dia_pawn,
             _ => null
         };
     }
 
-    // 아래는 좌표 및 움직임 관련 기존 코드 유지
     public void SetCoords()
     {
         float x = xBoard * 0.66f - 2.3f;
@@ -137,6 +140,236 @@ public class Chessman : MonoBehaviour
     public void SetYBoard(int y) => yBoard = y;
     public string GetPlayer() => player;
 
-    // 나머지 메서드들은 동일하게 유지 (생략 가능)
+    private void OnMouseUp()
+    {
+        if (!controller.GetComponent<Game>().IsGameOver() &&
+            controller.GetComponent<Game>().GetCurrentPlayer() == player)
+        {
+            DestroyMovePlates();
+            InitiateMovePlates();
+        }
+    }
 
+    public void DestroyMovePlates()
+    {
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("MovePlate"))
+        {
+            Destroy(obj);
+        }
+    }
+
+    public void InitiateMovePlates()
+    {
+        switch (this.name)
+        {
+            case "black_queen":
+            case "white_queen":
+                LineMovePlate(1, 0); LineMovePlate(0, 1);
+                LineMovePlate(1, 1); LineMovePlate(-1, 0);
+                LineMovePlate(0, -1); LineMovePlate(-1, -1);
+                LineMovePlate(-1, 1); LineMovePlate(1, -1);
+                break;
+            case "black_knight":
+            case "white_knight":
+                LMovePlate();
+                break;
+            case "black_bishop":
+            case "white_bishop":
+                LineMovePlate(1, 1); LineMovePlate(1, -1);
+                LineMovePlate(-1, 1); LineMovePlate(-1, -1);
+                break;
+            case "black_king":
+            case "white_king":
+                SurroundMovePlate();
+                TryCastling();
+                break;
+            case "black_rook":
+            case "white_rook":
+                LineMovePlate(1, 0); LineMovePlate(0, 1);
+                LineMovePlate(-1, 0); LineMovePlate(0, -1);
+                break;
+            case "black_pawn":
+                PawnMovePlate(xBoard, yBoard - 1);
+                break;
+            case "white_pawn":
+                PawnMovePlate(xBoard, yBoard + 1);
+                break;
+        }
+    }
+
+    public void TryCastling()
+    {
+        Game sc = controller.GetComponent<Game>();
+        if (hasMoved) return;
+
+        int y = (player == "white") ? 0 : 7;
+
+        GameObject rightRook = sc.GetPosition(7, y);
+        if (rightRook != null && rightRook.name == player + "_rook")
+        {
+            Chessman rookCm = rightRook.GetComponent<Chessman>();
+            if (!rookCm.HasMoved() &&
+                sc.GetPosition(5, y) == null && sc.GetPosition(6, y) == null)
+            {
+                MovePlateSpawn(6, y);
+            }
+        }
+
+        GameObject leftRook = sc.GetPosition(0, y);
+        if (leftRook != null && leftRook.name == player + "_rook")
+        {
+            Chessman rookCm = leftRook.GetComponent<Chessman>();
+            if (!rookCm.HasMoved() &&
+                sc.GetPosition(1, y) == null && sc.GetPosition(2, y) == null && sc.GetPosition(3, y) == null)
+            {
+                MovePlateSpawn(2, y);
+            }
+        }
+    }
+
+    public void LineMovePlate(int xInc, int yInc)
+    {
+        Game sc = controller.GetComponent<Game>();
+        int x = xBoard + xInc;
+        int y = yBoard + yInc;
+
+        while (sc.PositionOnBoard(x, y) && sc.GetPosition(x, y) == null)
+        {
+            MovePlateSpawn(x, y);
+            x += xInc;
+            y += yInc;
+        }
+
+        if (sc.PositionOnBoard(x, y) && sc.GetPosition(x, y).GetComponent<Chessman>().player != player)
+        {
+            MovePlateAttackSpawn(x, y);
+        }
+    }
+
+    public void LMovePlate()
+    {
+        PointMovePlate(xBoard + 1, yBoard + 2);
+        PointMovePlate(xBoard - 1, yBoard + 2);
+        PointMovePlate(xBoard + 2, yBoard + 1);
+        PointMovePlate(xBoard + 2, yBoard - 1);
+        PointMovePlate(xBoard + 1, yBoard - 2);
+        PointMovePlate(xBoard - 1, yBoard - 2);
+        PointMovePlate(xBoard - 2, yBoard + 1);
+        PointMovePlate(xBoard - 2, yBoard - 1);
+    }
+
+    public void SurroundMovePlate()
+    {
+        PointMovePlate(xBoard, yBoard + 1);
+        PointMovePlate(xBoard, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard);
+        PointMovePlate(xBoard - 1, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard + 1);
+        PointMovePlate(xBoard + 1, yBoard);
+        PointMovePlate(xBoard + 1, yBoard - 1);
+        PointMovePlate(xBoard + 1, yBoard + 1);
+    }
+
+    public void PointMovePlate(int x, int y)
+    {
+        Game sc = controller.GetComponent<Game>();
+        if (sc.PositionOnBoard(x, y))
+        {
+            GameObject cp = sc.GetPosition(x, y);
+
+            if (cp == null)
+                MovePlateSpawn(x, y);
+            else if (cp.GetComponent<Chessman>().player != player)
+                MovePlateAttackSpawn(x, y);
+        }
+    }
+
+        public void PawnMovePlate(int x, int y)
+    {
+        Game sc = controller.GetComponent<Game>();
+
+        int direction = (player == "white") ? 1 : -1;
+        int startRow = (player == "white") ? 1 : 6;
+
+        int currentX = GetXBoard();
+        int currentY = GetYBoard();
+
+        // 1칸 전진
+        if (sc.PositionOnBoard(x, y) && sc.GetPosition(x, y) == null)
+        {
+            MovePlateSpawn(x, y);
+
+            // 2칸 전진 가능 여부
+            int twoStepY = y + direction;
+            if (currentY == startRow && sc.PositionOnBoard(x, twoStepY) && sc.GetPosition(x, twoStepY) == null)
+            {
+                MovePlateSpawn(x, twoStepY);
+            }
+        }
+
+        // 대각 공격
+        for (int dx = -1; dx <= 1; dx += 2)
+        {
+            int targetX = currentX + dx;
+            int targetY = currentY + direction;
+
+            if (sc.PositionOnBoard(targetX, targetY))
+            {
+                GameObject cp = sc.GetPosition(targetX, targetY);
+                if (cp != null && cp.GetComponent<Chessman>().player != player)
+                {
+                    MovePlateAttackSpawn(targetX, targetY);
+                }
+            }
+        }
+
+        // ✅ 앙파상 마커 생성 (당신의 방식 기반)
+        for (int dx = -1; dx <= 1; dx += 2)
+        {
+            int sideX = currentX + dx;
+            int sideY = currentY;
+
+            if (sc.PositionOnBoard(sideX, sideY))
+            {
+                GameObject sidePawn = sc.GetPosition(sideX, sideY);
+                if (sidePawn != null)
+                {
+                    Chessman sideCm = sidePawn.GetComponent<Chessman>();
+
+                    // 조건: 상대 진영 폰 + 전턴에 2칸 전진(방금 움직였고 처음 이동)
+                    if (sideCm.name.Contains("pawn") &&
+                        sideCm.GetPlayer() != player &&
+                        sideCm.HasMoved() &&
+                        sidePawn == sc.enPassantVictim) // ✅ 전턴 이동한 대상
+                    {
+                        int targetY = currentY + direction;
+                        MovePlateAttackSpawn(sideX, targetY);
+                    }
+                }
+            }
+        }
+    }
+
+    public void MovePlateSpawn(int x, int y)
+    {
+        float px = x * 0.66f - 2.3f;
+        float py = y * 0.66f - 2.3f;
+
+        GameObject mp = Instantiate(movePlate, new Vector3(px, py, -3.0f), Quaternion.identity);
+        MovePlate mpScript = mp.GetComponent<MovePlate>();
+        mpScript.SetReference(gameObject);
+        mpScript.SetCoords(x, y);
+    }
+
+    public void MovePlateAttackSpawn(int x, int y)
+    {
+        float px = x * 0.66f - 2.3f;
+        float py = y * 0.66f - 2.3f;
+
+        GameObject mp = Instantiate(movePlate, new Vector3(px, py, -3.0f), Quaternion.identity);
+        MovePlate mpScript = mp.GetComponent<MovePlate>();
+        mpScript.attack = true;
+        mpScript.SetReference(gameObject);
+        mpScript.SetCoords(x, y);
+    }
 }

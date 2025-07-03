@@ -48,6 +48,15 @@ public class MovePlate : MonoBehaviour
             GameObject cp = game.GetPosition(matrixX, matrixY);
             if (cp != null)
             {
+                Chessman attacker = reference.GetComponent<Chessman>();
+                string attackerPlayer = attacker.name.StartsWith("white") ? "white" : "black";
+                string attackerPieceType = attacker.name.Split('_')[1];
+                string attackerEmblem = PlayerPrefs.GetString(attackerPlayer == "white" ? "P1_Emblem" : "P2_Emblem");
+
+                // 컷씬 호출 (공격자 기준)
+                game.ShowCutsceneFor(attackerEmblem, attackerPieceType);
+
+                // 킹이면 게임 종료
                 if (cp.name == "white_king") game.Winner("black");
                 if (cp.name == "black_king") game.Winner("white");
 
@@ -99,7 +108,7 @@ public class MovePlate : MonoBehaviour
             }
         }
 
-        // ✅ 앙파상 대상 정보 저장 (2칸 전진한 폰일 경우)
+        // ✅ 앙파상 대상 정보 저장
         if (pieceName.Contains("pawn") && Mathf.Abs(matrixY - oldY) == 2)
         {
             game.enPassantTarget = new Vector2Int(matrixX, (matrixY + oldY) / 2);
@@ -135,28 +144,22 @@ public class MovePlate : MonoBehaviour
             return;
         }
 
-        // ✅ 마지막 이동 말 기록 (앙파상용)
         game.SetLastMoved(reference);
 
-        // 이동 완료
         game.SetPosition(reference);
         game.NextTurn();
         reference.GetComponent<Chessman>().DestroyMovePlates();
     }
 
-    public void SetCoords(int x, int y)
-    {
-        matrixX = x;
-        matrixY = y;
-    }
+    public void SetCoords(int x, int y) => (matrixX, matrixY) = (x, y);
+    public void SetReference(GameObject obj) => reference = obj;
+    public GameObject GetReference() => reference;
 
-    public void SetReference(GameObject obj)
+    public void DestroyMovePlates()
     {
-        reference = obj;
-    }
-
-    public GameObject GetReference()
-    {
-        return reference;
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("MovePlate"))
+        {
+            Destroy(obj);
+        }
     }
 }
