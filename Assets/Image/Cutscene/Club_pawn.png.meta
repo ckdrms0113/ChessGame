@@ -3,8 +3,8 @@ guid: fdc0ac9630eee4e48b0695f463046cde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1761828246908980766
-    second: Pawn_club_0
+      213: 7719846828041064423
+    second: Club_Pawn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pawn_club_0
+      name: Club_Pawn_0
       rect:
         serializedVersion: 2
         x: 2
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1e424cb475437810800000000000000
-      internalID: 1761828246908980766
+      spriteID: 7ef40d1e9c7622b60800000000000000
+      internalID: 7719846828041064423
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pawn_club_0: 1761828246908980766
+      Club_Pawn_0: 7719846828041064423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

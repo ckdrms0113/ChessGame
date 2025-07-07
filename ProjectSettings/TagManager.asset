@@ -7,11 +7,12 @@ TagManager:
   - MovePlate
   - WinnerText
   - RestartText
+  - ChessPiece
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CutsceneEffect
   - Water
   - UI
   - 
@@ -43,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: CutsceneFX
+    uniqueID: 2587289303
     locked: 0
   m_RenderingLayers:
   - Default

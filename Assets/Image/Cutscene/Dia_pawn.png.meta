@@ -3,8 +3,8 @@ guid: c2f0c2327526b7a48bd9b0cf34bb0e16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7202491117078133073
-    second: Pawn_dia_0
+      213: -4774695793650973474
+    second: Dia_Pawn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pawn_dia_0
+      name: Dia_Pawn_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa6c6ac4d7c9b0c90800000000000000
-      internalID: -7202491117078133073
+      spriteID: ed4c1ec197fdcbdb0800000000000000
+      internalID: -4774695793650973474
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pawn_dia_0: -7202491117078133073
+      Dia_Pawn_0: -4774695793650973474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

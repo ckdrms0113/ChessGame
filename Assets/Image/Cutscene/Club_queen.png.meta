@@ -3,8 +3,8 @@ guid: ea1c425fb9d6be34092dd54b8a22fcfb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4220053132760126016
-    second: Queen_club_0
+      213: 9176726947632779459
+    second: Club_Queen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Queen_club_0
+      name: Club_Queen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 042117727f3a09a30800000000000000
-      internalID: 4220053132760126016
+      spriteID: 3c0186ad9884a5f70800000000000000
+      internalID: 9176726947632779459
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Queen_club_0: 4220053132760126016
+      Club_Queen_0: 9176726947632779459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

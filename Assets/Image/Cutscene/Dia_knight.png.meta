@@ -3,8 +3,8 @@ guid: 7f458eaac2b1c6c4fae7fdc21c915a21
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8250241953861012552
-    second: Knight_dia_F_0
+      213: 3543082687127330325
+    second: Dia_Knight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Knight_dia_F_0
+      name: Dia_Knight_0
       rect:
         serializedVersion: 2
         x: 21
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b3f61597a0418d80800000000000000
-      internalID: -8250241953861012552
+      spriteID: 51e9f009eee8b2130800000000000000
+      internalID: 3543082687127330325
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knight_dia_F_0: -8250241953861012552
+      Dia_Knight_0: 3543082687127330325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

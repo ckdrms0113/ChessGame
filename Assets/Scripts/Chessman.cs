@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Chessman : MonoBehaviour
 {
-     public GameObject controller;
+    public GameObject controller;
     public GameObject movePlate;
 
     private int xBoard = -1;
     private int yBoard = -1;
     private string player;
-    private string emblem; // ♠, ♥, ♣, ♦ 중 하나
-
+    private string emblem;
     private bool hasMoved = false;
+
     public bool HasMoved() => hasMoved;
     public void SetMoved(bool value) => hasMoved = value;
 
@@ -32,100 +32,70 @@ public class Chessman : MonoBehaviour
         controller = GameObject.FindGameObjectWithTag("GameController");
         SetCoords();
 
-        // 플레이어 및 문양 결정
-        if (name.StartsWith("white"))
-        {
-            player = "white";
-            emblem = PlayerPrefs.GetString("P1_Emblem", "Spade");
-        }
-        else
-        {
-            player = "black";
-            emblem = PlayerPrefs.GetString("P2_Emblem", "Heart");
-        }
+        player = name.StartsWith("white") ? "white" : "black";
+        emblem = PlayerPrefs.GetString(player == "white" ? "P1_Emblem" : "P2_Emblem", "Spade");
 
-        string pieceType = name.Split('_')[1]; // "pawn", "king" 등
-
-        // 스프라이트 적용
+        string pieceType = name.Split('_')[1];
         Sprite selectedSprite = GetSprite(emblem, pieceType);
         if (selectedSprite != null)
-        {
             GetComponent<SpriteRenderer>().sprite = selectedSprite;
-        }
     }
 
     private Sprite GetSprite(string emblem, string pieceType)
     {
-        switch (emblem)
+        return emblem switch
         {
-            case "Spade":
-                return GetSpadeSprite(pieceType);
-            case "Heart":
-                return GetHeartSprite(pieceType);
-            case "Club":
-                return GetClubSprite(pieceType);
-            case "Dia":
-                return GetDiaSprite(pieceType);
-            default:
-                return null;
-        }
-    }
-
-    private Sprite GetSpadeSprite(string piece)
-    {
-        return piece switch
-        {
-            "queen" => Spade_queen,
-            "king" => Spade_king,
-            "rook" => Spade_rook,
-            "bishop" => Spade_bishop,
-            "knight" => Spade_knight,
-            "pawn" => Spade_pawn,
-            _ => null
+            "Spade" => GetSpadeSprite(pieceType),
+            "Heart" => GetHeartSprite(pieceType),
+            "Club"  => GetClubSprite(pieceType),
+            "Dia"   => GetDiaSprite(pieceType),
+            _        => null
         };
     }
 
-    private Sprite GetHeartSprite(string piece)
+    private Sprite GetSpadeSprite(string piece) => piece switch
     {
-        return piece switch
-        {
-            "queen" => Heart_queen,
-            "king" => Heart_king,
-            "rook" => Heart_rook,
-            "bishop" => Heart_bishop,
-            "knight" => Heart_knight,
-            "pawn" => Heart_pawn,
-            _ => null
-        };
-    }
+        "queen"  => Spade_queen,
+        "king"   => Spade_king,
+        "rook"   => Spade_rook,
+        "bishop" => Spade_bishop,
+        "knight" => Spade_knight,
+        "pawn"   => Spade_pawn,
+        _         => null
+    };
 
-    private Sprite GetClubSprite(string piece)
+    private Sprite GetHeartSprite(string piece) => piece switch
     {
-        return piece switch
-        {
-            "queen" => Club_queen,
-            "king" => Club_king,
-            "rook" => Club_rook,
-            "bishop" => Club_bishop,
-            "knight" => Club_knight,
-            "pawn" => Club_pawn,
-            _ => null
-        };
-    }
+        "queen"  => Heart_queen,
+        "king"   => Heart_king,
+        "rook"   => Heart_rook,
+        "bishop" => Heart_bishop,
+        "knight" => Heart_knight,
+        "pawn"   => Heart_pawn,
+        _         => null
+    };
 
-    private Sprite GetDiaSprite(string piece)
+    private Sprite GetClubSprite(string piece) => piece switch
     {
-        return piece switch
-        {
-            "queen" => Dia_queen,
-            "king" => Dia_king,
-            "rook" => Dia_rook,
-            "bishop" => Dia_bishop,
-            "knight" => Dia_knight,
-            "pawn" => Dia_pawn,
-            _ => null
-        };
-    }
+        "queen"  => Club_queen,
+        "king"   => Club_king,
+        "rook"   => Club_rook,
+        "bishop" => Club_bishop,
+        "knight" => Club_knight,
+        "pawn"   => Club_pawn,
+        _         => null
+    };
+
+    private Sprite GetDiaSprite(string piece) => piece switch
+    {
+        "queen"  => Dia_queen,
+        "king"   => Dia_king,
+        "rook"   => Dia_rook,
+        "bishop" => Dia_bishop,
+        "knight" => Dia_knight,
+        "pawn"   => Dia_pawn,
+        _         => null
+    };
 
     public void SetCoords()
     {
@@ -160,7 +130,7 @@ public class Chessman : MonoBehaviour
 
     public void InitiateMovePlates()
     {
-        switch (this.name)
+        switch (name)
         {
             case "black_queen":
             case "white_queen":
@@ -284,7 +254,7 @@ public class Chessman : MonoBehaviour
         }
     }
 
-        public void PawnMovePlate(int x, int y)
+    public void PawnMovePlate(int x, int y)
     {
         Game sc = controller.GetComponent<Game>();
 
@@ -323,7 +293,7 @@ public class Chessman : MonoBehaviour
             }
         }
 
-        // ✅ 앙파상 마커 생성 (당신의 방식 기반)
+        // 앙파상 처리
         for (int dx = -1; dx <= 1; dx += 2)
         {
             int sideX = currentX + dx;
@@ -335,12 +305,7 @@ public class Chessman : MonoBehaviour
                 if (sidePawn != null)
                 {
                     Chessman sideCm = sidePawn.GetComponent<Chessman>();
-
-                    // 조건: 상대 진영 폰 + 전턴에 2칸 전진(방금 움직였고 처음 이동)
-                    if (sideCm.name.Contains("pawn") &&
-                        sideCm.GetPlayer() != player &&
-                        sideCm.HasMoved() &&
-                        sidePawn == sc.enPassantVictim) // ✅ 전턴 이동한 대상
+                    if (sideCm.name.Contains("pawn") && sideCm.GetPlayer() != player && sideCm.HasMoved() && sidePawn == sc.enPassantVictim)
                     {
                         int targetY = currentY + direction;
                         MovePlateAttackSpawn(sideX, targetY);

@@ -3,8 +3,8 @@ guid: 2f5a48d7ab7736a4e9bf0bafb49f673a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3140433298346380078
-    second: Pawn_spade_0
+      213: 8818704180883033159
+    second: Spade_Pawn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pawn_spade_0
+      name: Spade_Pawn_0
       rect:
         serializedVersion: 2
         x: 22
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d4714bcd80fa64d0800000000000000
-      internalID: -3140433298346380078
+      spriteID: 74c09c0aab4526a70800000000000000
+      internalID: 8818704180883033159
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pawn_spade_0: -3140433298346380078
+      Spade_Pawn_0: 8818704180883033159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

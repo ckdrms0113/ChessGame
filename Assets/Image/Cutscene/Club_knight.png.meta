@@ -3,23 +3,23 @@ guid: 7db05cca9aa85b54ba0368a470c5ed42
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7452778738340213402
-    second: Knight_club_0
+      213: -7396091352475871026
+    second: Club_Knight_0
   - first:
-      213: -8669076297252374880
-    second: Knight_club_1
+      213: -4188541854074371606
+    second: Club_Knight_1
   - first:
-      213: 5827013523761143835
-    second: Knight_club_2
+      213: 7769780544321212415
+    second: Club_Knight_2
   - first:
-      213: 2530657677167696201
-    second: Knight_club_3
+      213: -3308326419019480144
+    second: Club_Knight_3
   - first:
-      213: -213689042819079501
-    second: Knight_club_4
+      213: -4470369541675198171
+    second: Club_Knight_4
   - first:
-      213: -83796293682020121
-    second: Knight_club_5
+      213: 796905627267946087
+    second: Club_Knight_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Knight_club_0
+      name: Club_Knight_0
       rect:
         serializedVersion: 2
         x: 5
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a923a58a6c69d6760800000000000000
-      internalID: 7452778738340213402
+      spriteID: ec85651e91ecb5990800000000000000
+      internalID: -7396091352475871026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_club_1
+      name: Club_Knight_1
       rect:
         serializedVersion: 2
         x: 57
@@ -165,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a67383d90141b780800000000000000
-      internalID: -8669076297252374880
+      spriteID: ae18a05206f4fd5c0800000000000000
+      internalID: -4188541854074371606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_club_2
+      name: Club_Knight_2
       rect:
         serializedVersion: 2
         x: 120
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b102e215de5bdd050800000000000000
-      internalID: 5827013523761143835
+      spriteID: fffc10f2d3ec3db60800000000000000
+      internalID: 7769780544321212415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_club_3
+      name: Club_Knight_3
       rect:
         serializedVersion: 2
         x: 206
@@ -209,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94912b7dfb3be1320800000000000000
-      internalID: 2530657677167696201
+      spriteID: 0b3cd4176a67612d0800000000000000
+      internalID: -3308326419019480144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_club_4
+      name: Club_Knight_4
       rect:
         serializedVersion: 2
         x: 232
@@ -231,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b2206e92f2d80df0800000000000000
-      internalID: -213689042819079501
+      spriteID: 52959bd369e06f1c0800000000000000
+      internalID: -4470369541675198171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_club_5
+      name: Club_Knight_5
       rect:
         serializedVersion: 2
         x: 2
@@ -253,8 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e0c69107bb46def0800000000000000
-      internalID: -83796293682020121
+      spriteID: 766d0d0227d2f0b00800000000000000
+      internalID: 796905627267946087
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knight_club_0: 7452778738340213402
-      Knight_club_1: -8669076297252374880
-      Knight_club_2: 5827013523761143835
-      Knight_club_3: 2530657677167696201
-      Knight_club_4: -213689042819079501
-      Knight_club_5: -83796293682020121
+      Club_Knight_0: -7396091352475871026
+      Club_Knight_1: -4188541854074371606
+      Club_Knight_2: 7769780544321212415
+      Club_Knight_3: -3308326419019480144
+      Club_Knight_4: -4470369541675198171
+      Club_Knight_5: 796905627267946087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

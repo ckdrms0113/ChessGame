@@ -3,8 +3,8 @@ guid: 12e0a872aebb5b440b256771d5b1a1be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 859049635804845140
-    second: Look_Heart_0
+      213: 6975629695690163574
+    second: Heart_Rook_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Look_Heart_0
+      name: Heart_Rook_0
       rect:
         serializedVersion: 2
         x: 56
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4549392a715fbeb00800000000000000
-      internalID: 859049635804845140
+      spriteID: 6754740ff3a6ec060800000000000000
+      internalID: 6975629695690163574
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Look_Heart_0: 859049635804845140
+      Heart_Rook_0: 6975629695690163574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

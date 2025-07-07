@@ -3,8 +3,8 @@ guid: 2c81f2757aab2204696532d5e35a58bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6490879789204228771
-    second: Look_club_0
+      213: 6046424336638038051
+    second: Club_Rook_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Look_club_0
+      name: Club_Rook_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3aac74337cc341a50800000000000000
-      internalID: 6490879789204228771
+      spriteID: 320569a16e639e350800000000000000
+      internalID: 6046424336638038051
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Look_club_0: 6490879789204228771
+      Club_Rook_0: 6046424336638038051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

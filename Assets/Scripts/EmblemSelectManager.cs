@@ -4,54 +4,76 @@ using TMPro;
 
 public class EmblemSelectManager : MonoBehaviour
 {
-    public TextMeshProUGUI infoText;
-
+    private string selectedEmblemP1 = "";
+    private string selectedEmblemP2 = "";
     private int currentPlayer = 1;
-    private string player1Emblem = "";
-    private string player2Emblem = "";
-    private bool isSelectionLocked = false;
+
+    public TextMeshProUGUI infoText;
+    public GameObject confirmButton;
+
+    void Start()
+    {
+        if (infoText != null)
+            infoText.text = "Player 1\nChoose your emblem";
+
+        if (confirmButton != null)
+            confirmButton.SetActive(false);
+    }
 
     public void OnEmblemSelected(string emblem)
     {
-        // 🔙 'Back' 버튼이 OnEmblemSelected로 연결되었을 경우
-        if (emblem == "Back")
-        {
-            HandleBack();
-            return;
-        }
-
-        if (isSelectionLocked) return;
-
         if (currentPlayer == 1)
         {
-            player1Emblem = emblem;
+            selectedEmblemP1 = emblem;
+            PlayerPrefs.SetString("P1_Emblem", emblem);
+            PlayerPrefs.Save();  // 수정: 저장 보장
             currentPlayer = 2;
-            infoText.text = "Player 2: Choose your emblem";
+
+            if (infoText != null)
+                infoText.text = "Player 2\nChoose your emblem";
+
+            if (confirmButton != null)
+                confirmButton.SetActive(false);
         }
         else if (currentPlayer == 2)
         {
-            player2Emblem = emblem;
+            if (emblem == selectedEmblemP1)
+            {
+                Debug.LogWarning("같은 문양은 선택할 수 없습니다!");
+                return;
+            }
 
-            isSelectionLocked = true; // 중복 방지
+            selectedEmblemP2 = emblem;
+            PlayerPrefs.SetString("P2_Emblem", emblem);
+            PlayerPrefs.Save();  // 수정: 저장 보장
 
-            PlayerPrefs.SetString("P1_Emblem", player1Emblem);
-            PlayerPrefs.SetString("P2_Emblem", player2Emblem);
-
-            SceneManager.LoadScene("Game");
+            if (confirmButton != null)
+                confirmButton.SetActive(true);
         }
     }
 
-    private void HandleBack()
+    public void OnConfirmSelection()
     {
-        if (currentPlayer == 1)
+        SceneManager.LoadScene("CardScene");
+    }
+
+    public void OnBackButton()
+    {
+        if (currentPlayer == 2)
         {
-            SceneManager.LoadScene("Main");
+            currentPlayer = 1;
+            selectedEmblemP2 = "";
+            PlayerPrefs.DeleteKey("P2_Emblem");
+
+            if (infoText != null)
+                infoText.text = "Player 1\nChoose your emblem";
+
+            if (confirmButton != null)
+                confirmButton.SetActive(false);
         }
         else
         {
-            currentPlayer = 1;
-            player2Emblem = "";
-            infoText.text = "Player 1: Choose your emblem";
+            SceneManager.LoadScene("Main");
         }
     }
 }

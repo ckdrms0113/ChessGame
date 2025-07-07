@@ -3,8 +3,8 @@ guid: 698bf5066103c784bb5fa96d6a17635c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1230250808699290020
-    second: Bishop_spade_0
+      213: -5911329216200884749
+    second: Spade_Bishop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bishop_spade_0
+      name: Spade_Bishop_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a18825a79ab21110800000000000000
-      internalID: 1230250808699290020
+      spriteID: 3fd35fdb56db6fda0800000000000000
+      internalID: -5911329216200884749
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bishop_spade_0: 1230250808699290020
+      Spade_Bishop_0: -5911329216200884749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

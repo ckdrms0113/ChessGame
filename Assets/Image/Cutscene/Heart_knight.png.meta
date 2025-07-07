@@ -3,8 +3,8 @@ guid: da3dfeae6fcadd144a3d41cf866df3cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2300896261180142566
-    second: Knight_heart_0
+      213: -6422555993498486213
+    second: Heart_Knight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Knight_heart_0
+      name: Heart_Knight_0
       rect:
         serializedVersion: 2
         x: 16
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1c45578a039110e0800000000000000
-      internalID: -2300896261180142566
+      spriteID: b3a77712a5f7ed6a0800000000000000
+      internalID: -6422555993498486213
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knight_heart_0: -2300896261180142566
+      Heart_Knight_0: -6422555993498486213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

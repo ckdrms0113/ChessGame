@@ -3,8 +3,8 @@ guid: 7bc3292135024214881ed9b1d1790504
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6281823813188289266
-    second: Queen_dia_0
+      213: -405848665564451245
+    second: Dia_Queen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Queen_dia_0
+      name: Dia_Queen_0
       rect:
         serializedVersion: 2
         x: 34
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f28daeb9758d2750800000000000000
-      internalID: 6281823813188289266
+      spriteID: 35ee678f9c22e5af0800000000000000
+      internalID: -405848665564451245
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Queen_dia_0: 6281823813188289266
+      Dia_Queen_0: -405848665564451245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

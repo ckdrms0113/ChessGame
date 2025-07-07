@@ -3,11 +3,11 @@ guid: 5929532f72cfa4042aa542a3b1b580c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2022220250156774112
-    second: Look_dia_1_0
+      213: 2444787106534812834
+    second: Dia_Rook_0
   - first:
-      213: 7571076199367998124
-    second: Look_dia_1_1
+      213: -9198283372623259109
+    second: Dia_Rook_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Look_dia_1_0
+      name: Dia_Rook_0
       rect:
         serializedVersion: 2
         x: 20
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02dcdcb8561afe3e0800000000000000
-      internalID: -2022220250156774112
+      spriteID: 2ac667c9be0ade120800000000000000
+      internalID: 2444787106534812834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Look_dia_1_1
+      name: Dia_Rook_1
       rect:
         serializedVersion: 2
         x: 24
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caa7eb6a0bdd11960800000000000000
-      internalID: 7571076199367998124
+      spriteID: b1a9867d102295080800000000000000
+      internalID: -9198283372623259109
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Look_dia_1_0: -2022220250156774112
-      Look_dia_1_1: 7571076199367998124
+      Dia_Rook_0: 2444787106534812834
+      Dia_Rook_1: -9198283372623259109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

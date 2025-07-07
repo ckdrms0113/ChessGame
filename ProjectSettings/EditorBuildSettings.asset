@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/EmblemScene.unity
     guid: 5f2f67bd2048e3e499643cca7678f5d5
   - enabled: 1
+    path: Assets/Scenes/CardScene.unity
+    guid: eb451eac372c0d94fabe411e6cfa3293
+  - enabled: 1
+    path: Assets/Scenes/BoardScene.unity
+    guid: 0fb59cc7cb47b2540ab6b2f31789e267
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:

@@ -3,8 +3,8 @@ guid: 7a709db6dc8c3474f896cc4b2e773412
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4782557022361347537
-    second: King_dia_0
+      213: -470354446751302839
+    second: Dia_King_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: King_dia_0
+      name: Dia_King_0
       rect:
         serializedVersion: 2
         x: 5
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2a1a1c2ab1f0adb0800000000000000
-      internalID: -4782557022361347537
+      spriteID: 94bfcda6f17f879f0800000000000000
+      internalID: -470354446751302839
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      King_dia_0: -4782557022361347537
+      Dia_King_0: -470354446751302839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
